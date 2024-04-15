@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <header id="head">T o D o - L i s t</header>
+        <button id="open-todo-form" onclick="showTodo()">+</button>
+    </div>
+    <div id="body">
+        <div id="todo-form">
+            <h2>Add a ToDo Item</h2>
+            <input type="text" placeholder="Enter ToDo Text" id="subject"><br>
+            <input type="text" placeholder="Enter Due Time" id="time"><br>
+            <button id="cancel" onclick="hideTodo()">cancel</button>
+            <button id="adder" onclick="storeInput()">add</button>
+        </div>
+        <div>
+            <p id="contentDisplay"></p>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

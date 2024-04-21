@@ -7,11 +7,11 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
 }
 #body{
-    display: grid;
-    grid-template-columns: 33%;
+    display: inline;
 }
 #open-todo-form{
     position: relative;
@@ -39,6 +39,8 @@
  
 }
 #todo-form{
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -50,18 +52,24 @@
     display: none;
 }
 #todo-form input{
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
     margin: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
 }
 h2{
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
     background-color: #f5ba13;
     color: #fff;
     text-align: center;
     margin-bottom: 40px;
 }
 #adder{
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
     position: relative;
     left: 40%;
     color: #fff;
@@ -71,6 +79,8 @@ h2{
     height: 20px;
 }
 #cancel{
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
     position: relative;
     color: #fff;
     background-color: #f5ba13;
@@ -78,20 +88,28 @@ h2{
     width: 50px;
     height: 20px;
 }
-/* Additional styles for the entry containers with box shadow */
+
 .entry-container {
-    /* Your existing styles */
+    
     border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 10px;
+    width: 22%;
+    display: inline-block;
+    gap: 30px;
+    margin: 10px;
     background-color: #f9f9f9;
     border-radius: 5px;
-    
-    /* New styles for box shadow */
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
-
-
+#displayed-p{
+    display: flex;
+    justify-content: center;
+}
+#displayed-h2{
+    font-size:large;
+}
 
 
 

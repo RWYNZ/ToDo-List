@@ -101,7 +101,7 @@ h2{
     border-radius: 5px;
     font-family: "Protest Strike", sans-serif;
     font-style: normal;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 #displayed-p{
     display: flex;

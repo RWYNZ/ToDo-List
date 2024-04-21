@@ -17,10 +17,10 @@ let dataEntry = [];
 function checkDuplicate(subject, time) {
     for (let entry of dataEntry) {
         if (entry[0] === subject && entry[1] === time) {
-            return true; // Duplicate found
+            return true; 
         }
     }
-    return false; // No duplicate found
+    return false; 
 }
 
 // Function to store input data
@@ -31,7 +31,7 @@ function storeInput() {
     // Check for duplicates before storing
     if (checkDuplicate(subjectValue, timeValue)) {
         alert("Duplicate data found!");
-        return; // Don't add duplicate data
+        return; 
     }
 
     let innerValue = [subjectValue, timeValue];
@@ -47,22 +47,24 @@ function storeInput() {
     renderData();
 }
 
-// Function to render data as containers
+
 function renderData() {
-    // Clear previous content
+    
     contentDisplay.innerHTML = "";
 
-    // Iterate over each entry in dataEntry
+    
     dataEntry.forEach(entry => {
         // Create a container element for each entry
         const container = document.createElement("div");
         container.classList.add("entry-container");
 
         // Create elements to display subject and time
-        const subjectElement = document.createElement("p");
+        const subjectElement = document.createElement("h2");
+        subjectElement.setAttribute("id","displayed-h2")
         subjectElement.textContent = `Subject: ${entry[0]}`;
 
         const timeElement = document.createElement("p");
+        timeElement.setAttribute("id","displayed-p")
         timeElement.textContent = `Time: ${entry[1]}`;
 
         // Append subject and time elements to the container
@@ -73,3 +75,4 @@ function renderData() {
         contentDisplay.appendChild(container);
     });
 }
+

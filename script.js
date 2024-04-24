@@ -1,5 +1,5 @@
 const todoForm = document.getElementById("todo-form");
-const contentDisplay = document.getElementById("contentDisplay"); // Assuming you have an element with id "contentDisplay" to display data
+const contentDisplay = document.getElementById("contentDisplay"); 
 
 // Function to show the to-do form
 function showTodo() {
@@ -13,7 +13,7 @@ function hideTodo() {
 
 let dataEntry = [];
 
-// Function to check for duplicate entries
+// Function to check for duplicate 
 function checkDuplicate(subject, time) {
     for (let entry of dataEntry) {
         if (entry[0] === subject && entry[1] === time) {
@@ -28,7 +28,7 @@ function storeInput() {
     let subjectValue = document.getElementById("subject").value;
     let timeValue = document.getElementById("time").value;
 
-    // Check for duplicates before storing
+    // Check for duplicates 
     if (checkDuplicate(subjectValue, timeValue)) {
         alert("Duplicate data found!");
         return; 
@@ -48,31 +48,34 @@ function storeInput() {
 }
 
 
+
 function renderData() {
-    
     contentDisplay.innerHTML = "";
 
-    
-    dataEntry.forEach(entry => {
+    dataEntry.forEach((entry, index) => {
         // Create a container element for each entry
         const container = document.createElement("div");
         container.classList.add("entry-container");
 
         // Create elements to display subject and time
         const subjectElement = document.createElement("h2");
-        subjectElement.setAttribute("id","displayed-h2")
         subjectElement.textContent = `Subject: ${entry[0]}`;
 
         const timeElement = document.createElement("p");
-        timeElement.setAttribute("id","displayed-p")
         timeElement.textContent = `Time: ${entry[1]}`;
 
-        // Append subject and time elements to the container
+        // Create a button to mark the entry as done
+        const doneButton = document.createElement("button");
+        doneButton.textContent = "Done";
+        doneButton.addEventListener("click", () => {
+            // Remove the entry from dataEntry array
+            dataEntry.splice(index, 1);
+            // Re-render the list
+            renderData();
+        });
         container.appendChild(subjectElement);
         container.appendChild(timeElement);
-
-        // Append the container to the contentDisplay
+        container.appendChild(doneButton);
         contentDisplay.appendChild(container);
     });
 }
-
